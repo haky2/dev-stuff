@@ -6,7 +6,7 @@ description: 자바 ORM 표준 JPA 프로그래밍
 
 ## @Entity
 
-| 속성 | 기 | 기본 |
+| 속성 | 기능 | 기본값 |
 | :--- | :--- | :--- |
 | name | JPA에서 사용할 엔티티 이름을 지정 | 설정하지 않으면 클래스 이름을 그대로 사용 |
 
@@ -24,8 +24,8 @@ description: 자바 ORM 표준 JPA 프로그래밍
   <thead>
     <tr>
       <th style="text-align:left">&#xC18D;&#xC131;</th>
-      <th style="text-align:left">&#xAE30;</th>
-      <th style="text-align:left">&#xAE30;&#xBCF8;</th>
+      <th style="text-align:left">&#xAE30;&#xB2A5;</th>
+      <th style="text-align:left">&#xAE30;&#xBCF8;&#xAC12;</th>
     </tr>
   </thead>
   <tbody>
