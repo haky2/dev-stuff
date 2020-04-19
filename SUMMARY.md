@@ -2,11 +2,26 @@
 
 * [Initial page](README.md)
 
-## JPA
+## Book
 
-* [1장. JPA 소개](jpa/intro-jpa.md)
-* [2장. JPA 시작](jpa/start-jpa.md)
-* [3장. 영속성 관리](jpa/persistence-management.md)
-* [4장. 엔티티 매핑](jpa/entity-mapping.md)
-* [5장. 연관관계 매핑 기초](jpa/association-relation-basic.md)
+* [HTTP 완벽 가이드](book/http.md)
+* [자바 8 인 액션](book/java-8-in-action/README.md)
+  * [동작 파라미터화](book/java-8-in-action/untitled-2.md)
+  * [람다 표현식](book/java-8-in-action/untitled.md)
+  * [Stream](book/java-8-in-action/untitled-1.md)
+  * [스트림으로 데이터 수집](book/java-8-in-action/untitled-3.md)
+  * [병렬 데이터 처리와 성능](book/java-8-in-action/untitled-4.md)
+  * [리팩토링, 테스팅, 디버깅](book/java-8-in-action/undefined.md)
+  * [디폴트 메서드](book/java-8-in-action/undefined-1.md)
+  * [Optional](book/java-8-in-action/optional.md)
+  * [CompletableFuture](book/java-8-in-action/completablefuture.md)
+  * [새로운 날짜와 시간 API](book/java-8-in-action/api.md)
+  * [함수형 관점으로 생각하기](book/java-8-in-action/undefined-2.md)
+  * [함수형 프로그래밍 기법](book/java-8-in-action/undefined-3.md)
+* [자바 ORM 표준 JPA 프로그래밍](book/jpa/README.md)
+  * [1장. JPA 소개](book/jpa/intro-jpa.md)
+  * [2장. JPA 시작](book/jpa/start-jpa.md)
+  * [3장. 영속성 관리](book/jpa/persistence-management.md)
+  * [4장. 엔티티 매핑](book/jpa/entity-mapping.md)
+  * [5장. 연관관계 매핑 기초](book/jpa/association-relation-basic.md)
 
