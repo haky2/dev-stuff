@@ -8,4 +8,5 @@
 * [2장. JPA 시작](jpa/start-jpa.md)
 * [3장. 영속성 관리](jpa/persistence-management.md)
 * [4장. 엔티티 매핑](jpa/entity-mapping.md)
+* [5장. 연관관계 매핑 기초](jpa/association-relation-basic.md)
 
