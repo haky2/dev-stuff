@@ -4,7 +4,12 @@
 
 ## Book
 
-* [HTTP 완벽 가이드](book/http.md)
+* [HTTP 완벽 가이드](book/http-guide/README.md)
+  * [01. HTTP 개관](book/http-guide/01.-http.md)
+  * [02. URL과 리소스](book/http-guide/02.-url.md)
+  * [03. HTTP 메시지](book/http-guide/03.-http.md)
+  * [04. 커넥션 관리](book/http-guide/04..md)
+  * [05. 웹서버](book/http-guide/05..md)
 * [자바 8 인 액션](book/java-8-in-action/README.md)
   * [동작 파라미터화](book/java-8-in-action/untitled-2.md)
   * [람다 표현식](book/java-8-in-action/untitled.md)
