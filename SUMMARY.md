@@ -4,7 +4,7 @@
 
 ## JPA
 
-* [1장. JPA 소개](jpa/1-.-jpa.md)
-* [2장. JPA 시작](jpa/2-.-jpa.md)
-* [3장. 영속성 관리](jpa/3-..md)
+* [1장. JPA 소개](jpa/intro-jpa.md)
+* [2장. JPA 시작](jpa/start-jpa.md)
+* [3장. 영속성 관리](jpa/persistence-management.md)
 
