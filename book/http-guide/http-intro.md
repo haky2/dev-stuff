@@ -13,9 +13,10 @@ layout: post
 ### 미디어 타입
 
 * MIME 타입\(Multipurpose Internet Mail Extensions\) : 데이터 포맷 라벨, 모든 HTTP 객체 데이터에 MIME 타입을 붙인다. MIME 타입을 통하여 객체 확인. 주 타입 / 부 타입
-  * ex\) text/html, text/plain, image/jpeg, application/vnd.ms-powerpoint 등
+* ex\) text/html, text/plain, image/jpeg, application/vnd.ms-powerpoint 등
 
-    **URI \(Uniform Resource Identifier\)**
+  **URI \(Uniform Resource Identifier\)**
+
 * 통합 자원 식별자, 서버의 리소스 이름, 리소스의 주소라고 보면 됨
 
   **URL \(Uniform Resorce Locator\)**
