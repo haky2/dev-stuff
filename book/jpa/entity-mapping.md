@@ -15,7 +15,7 @@ description: 자바 ORM 표준 JPA 프로그래밍
 
 * 기본 생성자는 필수 \(public or protected\)
 * final 클래스, enum, interface, inner 클래스에는 사용 불가
-* 저장할 필드에 final 사용 금
+* 저장할 필드에 final 사용 금지
 {% endhint %}
 
 ## @Table
@@ -120,7 +120,7 @@ private String id;
 * MySQL\(AUTO\_INCREMENT\), PostgreSQL, SQL Server, DB2 등에서 사용
 * 데이터베이스에 값을 저장하고 나서야 기본 키 값을 구할 수 있을 때 사용한다
 * 기본 키 값을 얻어오기 위해 데이터베이스에 insert한 후에 추가로 조회를 한다
-* 데이터베이스에 엔티티를 저장해서 식별자 값을 획득한 후 영속성 컨텍스트에 저장한
+* 데이터베이스에 엔티티를 저장해서 식별자 값을 획득한 후 영속성 컨텍스트에 저장한다
 
 ```java
 @Id
@@ -161,7 +161,7 @@ JPA는 시퀀스에 접근하는 횟수를 줄이기 위해 @SequenceGenerator.a
 
 * 키 생성 테이블을 사용한다
 * 이 전략은 테이블을 사용하므로 모든 데이터베이스에 적용할 수 있다
-* SEQUENCE 전략과 내부 동작방식이 같
+* SEQUENCE 전략과 내부 동작방식이 같다
 
 ```sql
 create table MY_SEQUENCES (
