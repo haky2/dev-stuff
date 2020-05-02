@@ -12,16 +12,16 @@ layout: post
 
 ### 미디어 타입
 
-* MIME 타입\(Multipurpose Internet Mail Extensions\) : 데이터 포맷 라벨, 모든 HTTP 객체 데이터에 MIME 타입을 붙인다. MIME 타입을 통하여 객체 확인. 주 타입 / 부 타입
-* ex\) text/html, text/plain, image/jpeg, application/vnd.ms-powerpoint 등
+MIME 타입\(Multipurpose Internet Mail Extensions\) : 데이터 포맷 라벨, 모든 HTTP 객체 데이터에 MIME 타입을 붙인다. MIME 타입을 통하여 객체 확인. 주 타입 / 부 타입  
+ex\) text/html, text/plain, image/jpeg, application/vnd.ms-powerpoint 등
 
-  **URI \(Uniform Resource Identifier\)**
+### **URI**
 
-* 통합 자원 식별자, 서버의 리소스 이름, 리소스의 주소라고 보면 됨
+통합 자원 식별자\(Uniform Resource Identifier\), 서버의 리소스 이름, 리소스의 주소라고 보면 됨
 
-  **URL \(Uniform Resorce Locator\)**
+### **URL**
 
-* 통합 자원 지시자, 한 리소스에 대한 구체적인 위치. 오늘날 대부분의 URI는 URL
+통합 자원 지시자\(Uniform Resorce Locator\), 한 리소스에 대한 구체적인 위치. 오늘날 대부분의 URI는 URL
 
 ![url](https://user-images.githubusercontent.com/35331310/56505874-c731ca80-6557-11e9-839b-eed86d7ac668.png)
 
@@ -29,24 +29,29 @@ layout: post
 * 두 번째 부분 : 서버의 인터넷 주소를 제공 \(github.com\)
 * 세 번째 부분 : 웹 서버의 리소스 \(/haky2/let-us-spring/wiki/HTTP-웹의-기초/\_edit\)
 
-  **URN \(Uniform Resource Name\)**
+### **URN**
 
-* 통합 자원 이름, 리소스의 위치에 영향 받지 않는 유일한 이름
+통합 자원 이름\(Uniform Resource Name\), 리소스의 위치에 영향 받지 않는 유일한 이름
 
 ![urn](https://user-images.githubusercontent.com/35331310/56505931-f5170f00-6557-11e9-8e2c-d400ddcd7bc0.png)
 
 ## 트랜잭션
 
-* 요청 메시지 : 명령과 URI를 포함. 클라이언트에서 서버로
-* 응답 메시지 : 결과와 상태코드 포함. 서버가 클라이언트로
+### 요청 메시지
 
-  **메서드**
+명령과 URI를 포함. 클라이언트에서 서버로
 
-* 모든 HTTP 요청 메시지는 한 개의 메서드를 갖는다. GET, PUT, DELETE, POST, HEAD ....
+### 응답 메시지
 
-  **상태코드**
+결과와 상태코드 포함. 서버가 클라이언트로
 
-* 모든 HTTP 응답 메시지는 상태 코드와 함꼐 반환된다. 200, 404, 500 ....
+### **메서드**
+
+모든 HTTP 요청 메시지는 한 개의 메서드를 갖는다. GET, PUT, DELETE, POST, HEAD ....
+
+### **상태코드**
+
+모든 HTTP 응답 메시지는 상태 코드와 함꼐 반환된다. 200, 404, 500 ....
 
 ## 메시지
 
@@ -56,12 +61,9 @@ layout: post
 * 헤더 : MIME 타입, 응답 본문 길이 등을 나타냄
 * 본문 : 데이터, 이진 데이터\(이미지, 비디오, 오디오 등\) 포함 가능
 
-## TCP \(Transmission Control Protocol\)
+## TCP
 
-* 전송 제어 프로토콜
-
-  **TCP/IP**
-
+* 전송 제어 프로토콜\(Transmission Control Protocol\)
 * TCP : 오류 없는 데이터 전송, 순서에 맞는 전달, 조각나지 않는 데이터 스트림
 * TCP/IP : 패킷 교환 네트워크 프로토콜의 집합. 어떤 종류의 컴퓨터나 네트워크든 서로 신뢰성 있는 의사소통이 가능하도록 해주는 역할
 * HTTP 클라이언트가 서버에 메시지를 전송할 수 있게하기 위해, IP와 포트번호를 사용해 클라이언트와 서버 사이에 TCP/IP 커넥션을 맺어야 함

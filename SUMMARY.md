@@ -29,4 +29,5 @@
   * [3장. 영속성 관리](book/jpa/persistence-management.md)
   * [4장. 엔티티 매핑](book/jpa/entity-mapping.md)
   * [5장. 연관관계 매핑 기초](book/jpa/association-relation-basic.md)
+  * [6장. 다양한 연관관계 매핑](book/jpa/6-..md)
 
