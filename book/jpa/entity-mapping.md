@@ -129,7 +129,7 @@ private Long id;
 ```
 
 {% hint style="info" %}
-하이버네이트는 IDENTITY 전략에서 추가로 조회하는 부분을 최적화하기 위해 Statement.getGeneratedKEys\(\)를 사용하여 데이터베이스와 한 번만 통신한다.   
+하이버네이트는 IDENTITY 전략에서 추가로 조회하는 부분을 최적화하기 위해 Statement.getGeneratedKeys\(\)를 사용하여 데이터베이스와 한 번만 통신한다.   
 \(데이터 저장과 동시에 조회\)
 {% endhint %}
 

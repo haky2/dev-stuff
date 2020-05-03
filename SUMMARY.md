@@ -30,4 +30,5 @@
   * [4장. 엔티티 매핑](book/jpa/entity-mapping.md)
   * [5장. 연관관계 매핑 기초](book/jpa/association-relation-basic.md)
   * [6장. 다양한 연관관계 매핑](book/jpa/association-relation.md)
+  * [7장. 고급 매핑](book/jpa/association-relation-advanced.md)
 
