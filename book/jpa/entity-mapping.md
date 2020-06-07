@@ -57,7 +57,9 @@ description: 자바 ORM 표준 JPA 프로그래밍
       <td style="text-align:left"></td>
     </tr>
   </tbody>
-</table>## 데이터베이스 스키마 자동 생성
+</table>
+
+## 데이터베이스 스키마 자동 생성
 
 {% tabs %}
 {% tab title="JPA" %}

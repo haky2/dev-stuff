@@ -31,4 +31,7 @@
   * [5장. 연관관계 매핑 기초](book/jpa/association-relation-basic.md)
   * [6장. 다양한 연관관계 매핑](book/jpa/association-relation.md)
   * [7장. 고급 매핑](book/jpa/association-relation-advanced.md)
+  * [8장. 프록시와 연관관계 관리](book/jpa/proxy.md)
+  * [9장. 값 타입](book/jpa/value-type.md)
+  * [10장. 객체지향 쿼리 언어](book/jpa/jpa-query.md)
 
