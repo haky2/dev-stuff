@@ -35,4 +35,5 @@
   * [9장. 값 타입](book/jpa/value-type.md)
   * [10장. 객체지향 쿼리 언어](book/jpa/jpa-query.md)
   * [12장. 스프링 데이터 JPA](book/jpa/spring-data-jpa.md)
+  * [13장. 웹 애플리케이션과 영속성 관리](book/jpa/manage-persistence.md)
 
