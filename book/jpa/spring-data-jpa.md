@@ -133,8 +133,80 @@ int totalPages = result.getTotalPages();
 boolean hasNextPage = result.hasNextPage();
 ```
 
+## Custom Repository
+
+```java
+public interface MemberRepositoryCustom {
+    public List<Member> findMemberCustom();
+}
+
+// repository interface name + Impl (repository-impl-postfix option)
+public class MemberRepositoryImpl implements MemberRepositoryCustom {
+
+    @Override
+    public List<Member> findMEmberCustom() {
+        ...
+    }
+}
+
+public interface MemberRepository extends JpaRepository<Member, Long>,
+    MemberRepositoryCustom {
+}
+```
+
+## Spring Data JPA와 QueryDSL
+
+스프링 데이터 JPA는 2가지 방법으로 QueryDSL을 지원한다
+
+### QueryDslPredicateExecutor
+
+스프링 데이터 JPA가 제공하는 페이징과 정렬 기능도 함께 사용할 수 있다.  
+하지만 join, fetch를 사용할 수 없다. 따라서 JPAQuery를 직접 사용하거나 QueryDslRepositorySupport를 사용해야 한다.
+
+```java
+public interface ItemRepository extends JpaRepository<Item, Long>,
+    QueryDslPredicateExecutor<Item> {
+}
+```
+
+### QueryDslRepositorySupport
+
+```java
+public interface CustomOrderRepository {
+    public List<Order> search(OrderSearch orderSearch);
+}
+
+
+public class OrderRepositoryImpl extends QueryDslRepositorySupport
+    implements CustomOrderRepository {
+    
+    // 엔티티 클래스 정보
+    public OrderRepositoryImpl() {
+        super(Order.class);
+    }
+    
+    @Override
+    public List<Order> search(OrderSearch orderSearch) {
+        QOrder order = QOrder.order;
+        QMember member = QMember.member;
+        
+        JPQLQuery query = from(order);
+        
+        if (StringUtils.hasText(orderSearch.getMemberName())) {
+            query.leftJoin(order.member, member)
+                 .where(member.name.contains(orderSearch.getMemberName()));
+        }
+        if (orderSearch.getOrderStatus() != null) {
+            query.where(order.status.eq(orderSearch.getOrderStatus()));
+        }
+        return query.list(order);
+    }
+}
+```
+
 ## 참고
 
 * \*\*\*\*[**JPA의 동일성 보장으로 인해 발생하는 데이터 동기화 문제**](https://devhyogeon.tistory.com/6?category=878035)\*\*\*\*
 * \*\*\*\*[**Spring Batch의 멱등성 유지하기**](https://jojoldu.tistory.com/451)\*\*\*\*
+* \*\*\*\*[**Spring Boot, Spring Data JPA, Querydsl로 타입 세이프 쿼리 작성하기**](https://jsonobject.tistory.com/462)\*\*\*\*
 
