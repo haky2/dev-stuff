@@ -246,3 +246,67 @@ cq.select(m)
 List<Member> resultList = em.createQuery(cq).getResultList();
 ```
 
+## QueryDSL
+
+```java
+public void queryDSL() {
+
+    EntityManager em = emf.createEntityManager();
+    
+    JPAQuery query = new JPAQuery(em);
+    QMember qMmeber = new QMember("m");
+    List<Member> members = query.from(qMember)
+                                .where(qMember.name.eq("회원1"))
+                                .orderBy(qMember.name.desc())
+                                .list(qMember);
+}
+```
+
+## Native SQL
+
+native SQL을 사용하면 엔티티를 조회할 수 있고 JPA가 지원하는 영속성 컨텍스트의 기능을 그대로 사용할 수 있다.   
+반면에 JDBC API를 직접 사용하면 단순히 데이터의 나열을 조회할 뿐이다.
+
+```java
+// 결과 타입 정의
+public Query createNativeQuery(String sqlString, Class resultClass);
+
+// 결과 타입을 정의할 수 없을 때
+public QUery createNativeQuery(String sqlString);
+
+// 결과 매핑 사용
+public Query createNativeQuery(String sqlString, String resultSetMapping);
+```
+
+## 객체지향 쿼리 심화
+
+### 벌크 연산
+
+벌크 연산을 사용할 때는 벌크 연산이 영속성 컨텍스트를 무시하고 데이터베이스에 직접 쿼리한다는 점에 주의해야 한다.  
+따라서, 벌크 연산을 먼저 수행하던지, 벌크 연산 수행 후 영속성 컨텍스트 초기화 혹은 em.refresh\(\)를 사용하는 것이 필요하다.
+
+```java
+String qlString = 
+    "update Product p " +
+    "set p.price = p.price * 1.1 " +
+    "where p.stockAmount < :stockAmount";
+
+String qlString2 = 
+    "delete from Product p " +
+    "where p.price < :price";
+
+int resultCount = em.createQeury(qlString)
+                    .setParameter("stockAmount", 10)
+                    .executeUpdate();
+//                    .setParameter("price", 100)
+//                    .executeUpdate();
+```
+
+### 영속성 컨텍스트와 JPQL
+
+#### 쿼리 후 영속 상태인 것과 아닌 것
+
+조회한 엔티티만 영속성 컨텍스트가 관리한다. \(ex. 임베디드 타입은 조회 후 값을 변경해도 수정이 발생하지 않는다.\)
+
+#### JPQL로 조회한 엔티티와 영속성 컨텍스트
+
