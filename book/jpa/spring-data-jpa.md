@@ -91,3 +91,12 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
 int bulkPriceUp(@Param("stockAmount") String stockAmount);
 ```
 
+### 반환 타입
+
+
+
+## 참고
+
+* \*\*\*\*[**JPA의 동일성 보장으로 인해 발생하는 데이터 동기화 문제**](https://devhyogeon.tistory.com/6?category=878035)\*\*\*\*
+* \*\*\*\*[**Spring Batch의 멱등성 유지하기**](https://jojoldu.tistory.com/451)\*\*\*\*
+
