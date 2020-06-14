@@ -83,7 +83,7 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
 ### 벌크성 수정 쿼리
 
 ```java
-//
+// 벌크성 쿼리를 실행하고 나서 영속성 컨텍스트를 초기화 하는 옵션
 // @Modifying(clearAutomatically = true)
 @Modifying
 @Query("update Product p set p.price = p.price * 1.1 where
