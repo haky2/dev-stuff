@@ -44,7 +44,7 @@ public class Memeber {
 }
 
 
-//
+// jpa를 직접 사용해서 named 쿼리 호출
 public class MemberRepository {
 
     public List<Member> findByUsername(String username) {
@@ -56,7 +56,7 @@ public class MemberRepository {
     }
 }
 
-// 
+// 스프링 데이터 jpa로 named 쿼리 호출
 public interface MemberRepository extends JpaRepository<Member, Long> {
 
     List<Member> findByUsername(@Param("username") String username);
