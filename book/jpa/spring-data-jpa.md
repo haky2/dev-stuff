@@ -25,3 +25,43 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
 
 ### 메소드 이름으로 쿼리 생성
 
+```java
+// select m from MEmber m where m.email = ?1 and m.name = ?2
+public interface MemberRepository extends Repository<Member, Long> {
+    List<Member> findByEmailAndName(String email, String name);
+}
+```
+
+### JPA NamedQuery
+
+```java
+@Entity
+@NamedQuery(
+    name="Member.findByUsername",
+    query="select m from Member m where m.username = :username")
+public class Memeber {
+    ...
+}
+
+
+//
+public class MemberRepository {
+
+    public List<Member> findByUsername(String username) {
+        ...
+        List<Member> resultList =
+            em.createNamedQuery("Member.findByUsername", Member.class)
+              .setParameter("username", "member1")
+              .getResultList();
+    }
+}
+
+// 
+public interface MemberRepository extends JpaRepository<Member, Long> {
+
+    List<Member> findByUsername(@Param("username") String username);
+}
+```
+
+
+
