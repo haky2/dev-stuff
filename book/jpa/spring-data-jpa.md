@@ -103,7 +103,7 @@ Member findByEmail(String email);
 ### 페이징과 정렬
 
 ```java
-// count query
+// count query 사
 Page<Member> findByName(String name, Pageable pageable);
 
 // no count query
@@ -118,16 +118,18 @@ public interface MemberRepository extends Repository<Member, Long> {
     Page<Member> findByNameStartingWith(String name, Pageable pageable);
 }
 
-
+// 현재 페이지, 조회할 데이터 수, 정렬정보
 PageRequest pageRequest = 
-  // 
   new PageRequest(0, 10, new Sort(Direction.DESC, "name"));
   
 Page<Member> result =
   memberRepository.findByNameStartingWith("Kim", pageRequest);
-  
+
+// 조회된 데이터  
 List<Member> members = result.getContent();
+// 전체 페이지 수
 int totalPages = result.getTotalPages();
+// 다음 페이지 존재 여부
 boolean hasNextPage = result.hasNextPage();
 ```
 
