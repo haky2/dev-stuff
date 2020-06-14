@@ -227,17 +227,18 @@ public class Member {
 ```java
 // JPQL
 // select m from Memeber m
-// where m.username=''
+// where m.username='회원1'
 // order by m.age desc
 
 CriteriaBuilder cb = em.getGriteriaBuilder();
 CriteriaQeury<Member> cq = cb.createQuery(Member.class);
+// from 생성
 Root<Member> m = cq.from(Member.class);
-
-Predicate usernameEqual = cb.equal(m.get("username"), "");
-
+// 검색 조건 정의
+Predicate usernameEqual = cb.equal(m.get("username"), "회원1");
+// 정렬 조건 정의
 javax.persistence.criteria.Order ageDesc = cb.desc(m.get("age"));
-
+// 쿼리 생성
 cq.select(m)
   .where(usernameEqual)
   .orderBy(ageDesc);
