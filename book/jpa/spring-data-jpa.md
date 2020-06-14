@@ -93,7 +93,43 @@ int bulkPriceUp(@Param("stockAmount") String stockAmount);
 
 ### 반환 타입
 
+```java
+// multiple result (or return empty collection)
+List<Member> findByName(String name);
+// single result (or return null)
+Member findByEmail(String email);
+```
 
+### 페이징과 정렬
+
+```java
+// count query
+Page<Member> findByName(String name, Pageable pageable);
+
+// no count query
+List<Member> findByName(String name, Pageable pageable);
+
+List<Member> findByName(String name, Sort sort)
+```
+
+```java
+public interface MemberRepository extends Repository<Member, Long> {
+
+    Page<Member> findByNameStartingWith(String name, Pageable pageable);
+}
+
+
+PageRequest pageRequest = 
+  // 
+  new PageRequest(0, 10, new Sort(Direction.DESC, "name"));
+  
+Page<Member> result =
+  memberRepository.findByNameStartingWith("Kim", pageRequest);
+  
+List<Member> members = result.getContent();
+int totalPages = result.getTotalPages();
+boolean hasNextPage = result.hasNextPage();
+```
 
 ## 참고
 
