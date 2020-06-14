@@ -222,3 +222,26 @@ public class Member {
 }
 ```
 
+## Criteria
+
+```java
+// JPQL
+// select m from Memeber m
+// where m.username=''
+// order by m.age desc
+
+CriteriaBuilder cb = em.getGriteriaBuilder();
+CriteriaQeury<Member> cq = cb.createQuery(Member.class);
+Root<Member> m = cq.from(Member.class);
+
+Predicate usernameEqual = cb.equal(m.get("username"), "");
+
+javax.persistence.criteria.Order ageDesc = cb.desc(m.get("age"));
+
+cq.select(m)
+  .where(usernameEqual)
+  .orderBy(ageDesc);
+  
+List<Member> resultList = em.createQuery(cq).getResultList();
+```
+
