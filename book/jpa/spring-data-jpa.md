@@ -63,5 +63,31 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
 }
 ```
 
+### @Query
 
+```java
+public interface MemberRepository extends JpaRepository<Member, Long> {
+
+    @Query("select m from Member m where m.username =?1")
+    Member findByUsername(String username);
+    
+    @Query("select m from Member m where m.username =:name")
+    Member findByUsername2(@Parma("name") String username);
+    
+    @Query(value = "SELECT * FROM MEMBER WHERE USERNAME = ?0",
+           nativeQeury = true)
+    Member findByUsername3(String username);
+}
+```
+
+### 벌크성 수정 쿼리
+
+```java
+//
+// @Modifying(clearAutomatically = true)
+@Modifying
+@Query("update Product p set p.price = p.price * 1.1 where
+    p.stockAmount < :stockAmount")
+int bulkPriceUp(@Param("stockAmount") String stockAmount);
+```
 
