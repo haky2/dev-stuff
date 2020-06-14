@@ -180,7 +180,7 @@ public interface CustomOrderRepository {
 public class OrderRepositoryImpl extends QueryDslRepositorySupport
     implements CustomOrderRepository {
     
-    // 엔티티 클래스 정보
+    // 엔티티 클래스 정보를 넘겨주어야 한다
     public OrderRepositoryImpl() {
         super(Order.class);
     }
