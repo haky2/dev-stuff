@@ -73,5 +73,54 @@ A, B가 동시에 데이터를 수정하면 나중에 완료\(수정\)한 데이
 벌크 연산에서 버전을 증가하려면 버전 필드를 강제로 증가시켜야 한다.
 {% endhint %}
 
+### JPA Lock
+
+{% hint style="success" %}
+#### JPA를 사용할 때 추천하는 전략
+
+READ COMMITTED + 낙관적 버전 관리 \(두 번의 갱신 내역 분실 문제 예방\)
+{% endhint %}
+
+Lock은 다음 위치에 적용할 수 있다.
+
+* EntityManager.lock\(\), EntityManager.find\(\), EntityManager.refresh\(\)
+* Query.setLockMode\(\)
+* @NamedQuery
+
+```java
+// ex1
+Board board = em.find(Board.class, id, LockModeType.OPTIMISTIC);
+
+// ex2
+Board board = em.find(Board.class, id);
+...
+em.lock(board, LockModeType.OPTIMISTIC);
+```
+
+### JPA Optimistic Lock
+
+JPA가 제공하는 낙관적 락은 버전\(@Version\)을 사용한다. 낙관적 락은 트랜잭션을 커밋하는 시점에 충돌을 알 수 있다는 특징이 있다. 낙관적 락의 옵션은 아래와 같다.
+
+{% tabs %}
+{% tab title="NONE" %}
+* 용도 : 조회 시점부터 수정 시점까지 보장
+* 동작 : 엔티티를 수정할 때 버전을 증가한다. 버전이 다르면 예외가 발생한다.
+* 이점 : 두 번의 갱신 분실 문제를 예방한다.
+{% endtab %}
+
+{% tab title="OPTIMISTIC" %}
+* 용도 : 조회 시점부터 트랜잭션이 끝날 때까지 조회한 엔티티가 변경되지 않음을 보장
+* 동작 : 트랜잭션을 커밋할 때 버전을 조회하여 다르면 예외 발생
+* 이점 : DIRTY READ와 NON-REPEATABLE READ 방지
+* 비고 : @Version만 사용할 때에는 수정해야 버전 정보를 확인하지만, OPTIMISTIC 옵션은 엔티티를 수정하지 않고 단순히 조회만 해도 버전을 확인
+{% endtab %}
+
+{% tab title="OPTIMISTIC\_FORCE\_INCREMENT" %}
+* 용도 : 논리적인 단위의 엔티티 묶음을 관리할 수 있다. \(ex. 첨부파일 수정할때 게시글 버전 강제 업데이트\)
+* 동작 : 엔티티를 수정하지 않아도 트랜잭션을 커밋할 때 버전 정보를 강제로 증가. 
+* 이점 : 강제로 버전을 증가해서 논리적인 단위의 엔티티 묶음을 버전 관리 가능
+{% endtab %}
+{% endtabs %}
+
 
 
