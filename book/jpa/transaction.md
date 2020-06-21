@@ -4,7 +4,7 @@ description: 자바 ORM 표준 JPA 프로그래밍
 
 # 16장. 트랜잭션과 락, 2차 캐시
 
-### 트랜잭션과 락
+## 트랜잭션과 락
 
 ### 트랜잭션과 격리 수준
 
@@ -126,9 +126,28 @@ JPA가 제공하는 낙관적 락은 버전\(@Version\)을 사용한다. 낙관�
 
 JPA가 제공하는 비관적 락은 데이터베이스 트랜잭션 락 메커니즘에 의존하는 방법이다. 주로 SQL 쿼리에 [select for update](https://dololak.tistory.com/446) 구문을 사용하면서 시작하고 버전 정보는 사용하지 않는다. 주로 PESSIMISTIC\_WRITE 모드를 사용한다.
 
+* 엔티티가 아닌 스칼라 타입을 조회할 때도 사용할 수 있다.
+* 데이터를 수정하는 즉시 트랜잭션 충돌을 감지할 수 있다.
+
+{% tabs %}
+{% tab title="PESSIMISTIC\_WRITE" %}
+* 용도 : 데이터베이스에 쓰기 락을 건다.
+* 동작 : 데이터베이스 select for update를 사용해서 락을 건다.
+* 이점 : NON-REPEATABLE READ를 방지. 락이 걸린 로우는 다른 트랜잭션이 수정할 수 없다.
+{% endtab %}
+
+{% tab title="RESSIMISTIC\_READ" %}
+* 용도 : 데이터를 반복 읽기만 하고 수정하지 않을때 사용 \(일반적으로 사용하지 않음\)
+{% endtab %}
+
+{% tab title="PESSIMISTIC\_FORCE\_INCREMENT" %}
+* 용도 : 비관적 락 중 유일하게 버전 정보 사용. 버전 정보 강제 증가 시킴
+{% endtab %}
+{% endtabs %}
+
+## 2차 캐시
+
+### 1차 캐시와 2차 캐시
 
 
-## 참고
-
-* [SELECT FOR UPDATE](https://dololak.tistory.com/446)
 
