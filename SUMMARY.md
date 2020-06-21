@@ -38,4 +38,5 @@
   * [13장. 웹 애플리케이션과 영속성 관리](book/jpa/manage-persistence.md)
   * [14장. 컬렉션과 부가 기능](book/jpa/collection.md)
   * [15장. 고급 주제와 성능 최적화](book/jpa/advanced.md)
+  * [16장. 트랜잭션과 락, 2차 캐시](book/jpa/transaction.md)
 
