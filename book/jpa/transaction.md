@@ -4,7 +4,7 @@ description: 자바 ORM 표준 JPA 프로그래밍
 
 # 16장. 트랜잭션과 락, 2차 캐시
 
-## 트랜잭션과 락
+### 트랜잭션과 락
 
 ### 트랜잭션과 격리 수준
 
@@ -122,5 +122,13 @@ JPA가 제공하는 낙관적 락은 버전\(@Version\)을 사용한다. 낙관�
 {% endtab %}
 {% endtabs %}
 
+### JPA Pessmistic Lock
 
+JPA가 제공하는 비관적 락은 데이터베이스 트랜잭션 락 메커니즘에 의존하는 방법이다. 주로 SQL 쿼리에 [select for update](https://dololak.tistory.com/446) 구문을 사용하면서 시작하고 버전 정보는 사용하지 않는다. 주로 PESSIMISTIC\_WRITE 모드를 사용한다.
+
+
+
+## 참고
+
+* [SELECT FOR UPDATE](https://dololak.tistory.com/446)
 
