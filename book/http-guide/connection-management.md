@@ -13,14 +13,12 @@ layout: post
 
 모든 HTTP 통신은 패킷 교환 네트워크 프로토콜들의 계층화된 집합인 TCP/IP를 통해 이루어진다.
 
-{% file src="../../.gitbook/assets/kakaotalk\_photo\_2020-06-23-21-58-46.jpeg" caption="웹브라우저가 TCP 커넥션을 통해서 웹 서버에 요청을 보낸다" %}
+![](../../.gitbook/assets/kakaotalk_photo_2020-06-23-21-58-46.jpeg)
 
 * TCP는 HTTP에게 신뢰할 만한 통신 방식을 제공한다. \(손실 및 손상 되지 않고 순서가 바뀌지 않는다\)
 * TCP는 IP 패킷이라고 불리는 작은 조각을 통해 데이터를 전송한다.
 
-{% file src="../../.gitbook/assets/kakaotalk\_photo\_2020-06-23-21-58-51.jpeg" caption="네트워크 프로토콜 스택" %}
-
-
+![](../../.gitbook/assets/kakaotalk_photo_2020-06-23-21-58-51.jpeg)
 
 
 
