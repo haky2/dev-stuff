@@ -41,4 +41,5 @@
   * [16장. 트랜잭션과 락, 2차 캐시](book/jpa/transaction.md)
 * [객체지향의 사실과 오해](book/the-essence-of-object-orientation/README.md)
   * [1. 협력하는 객체들의 공동체](book/the-essence-of-object-orientation/1.md)
+  * [2. 이상한 나라의 객체](book/the-essence-of-object-orientation/2.md)
 
