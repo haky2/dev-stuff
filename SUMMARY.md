@@ -44,4 +44,5 @@
   * [2. 이상한 나라의 객체](book/the-essence-of-object-orientation/2.md)
 * [토비의 스프링](book/spring/README.md)
   * [1. 오브젝트와 의존관계](book/spring/1.md)
+  * [3. 템플릿](book/spring/3.md)
 
