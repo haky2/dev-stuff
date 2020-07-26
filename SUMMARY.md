@@ -44,6 +44,7 @@
   * [1. 협력하는 객체들의 공동체](book/the-essence-of-object-orientation/1.md)
   * [2. 이상한 나라의 객체](book/the-essence-of-object-orientation/2.md)
   * [3. 타입과 추상화](book/the-essence-of-object-orientation/3.md)
+  * [4. 역할, 책임, 협력](book/the-essence-of-object-orientation/4.md)
 * [토비의 스프링](book/spring/README.md)
   * [1. 오브젝트와 의존관계](book/spring/1.md)
   * [3. 템플릿](book/spring/3.md)
