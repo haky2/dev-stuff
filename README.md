@@ -10,5 +10,9 @@ description: by haky
 
 {% page-ref page="book/jpa/" %}
 
+{% page-ref page="book/the-essence-of-object-orientation/" %}
+
+{% page-ref page="book/spring/" %}
+
 
 
