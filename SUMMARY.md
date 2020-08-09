@@ -47,6 +47,7 @@
   * [4. 역할, 책임, 협력](book/the-essence-of-object-orientation/4.md)
   * [5. 책임과 메시지](book/the-essence-of-object-orientation/5.md)
   * [6. 객체 지도](book/the-essence-of-object-orientation/6.md)
+  * [7. 함께 모으기](book/the-essence-of-object-orientation/7.md)
 * [토비의 스프링](book/spring/README.md)
   * [1. 오브젝트와 의존관계](book/spring/1.md)
   * [3. 템플릿](book/spring/3.md)
