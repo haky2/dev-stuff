@@ -53,5 +53,5 @@
   * [3. 템플릿](book/spring/3.md)
   * [5. 서비스 추상화](book/spring/5.md)
   * [6. AOP](book/spring/6.md)
-  * [12. 스프링 MVC](book/spring/12.-mvc.md)
+  * [12. 스프링 MVC](book/spring/12.md)
 
