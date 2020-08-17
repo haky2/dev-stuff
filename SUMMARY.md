@@ -16,6 +16,7 @@
   * [09. 웹 로봇](book/http-guide/9.md)
   * [10. HTTP/2.0](book/http-guide/10.md)
   * [11. 클라이언트 식별과 쿠키](book/http-guide/11.md)
+  * [12. 기본 인증](book/http-guide/12.md)
 * [자바 8 인 액션](book/java-8-in-action/README.md)
   * [동작 파라미터화](book/java-8-in-action/untitled-2.md)
   * [람다 표현식](book/java-8-in-action/untitled.md)
