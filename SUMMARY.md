@@ -60,5 +60,5 @@
   * [5. 서비스 추상화](book/spring/5.md)
   * [6. AOP](book/spring/6.md)
   * [12. 스프링 MVC](book/spring/12.md)
-* [Junit](book/junit.md)
+* [JUnit](book/junit.md)
 
