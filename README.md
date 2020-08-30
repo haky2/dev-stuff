@@ -4,15 +4,15 @@ description: by haky
 
 # dev-stuff
 
-{% page-ref page="book/http/" %}
+{% page-ref page="summrize-a-book/http/" %}
 
-{% page-ref page="book/java8/" %}
+{% page-ref page="summrize-a-book/java8/" %}
 
-{% page-ref page="book/jpa/" %}
+{% page-ref page="summrize-a-book/jpa/" %}
 
-{% page-ref page="book/object-orientation/" %}
+{% page-ref page="summrize-a-book/object-orientation/" %}
 
-{% page-ref page="book/object-orientation-1/" %}
+{% page-ref page="summrize-a-book/spring/" %}
 
 
 
