@@ -20,6 +20,7 @@
   * [13. 다이제스트 인증](summrize-a-book/http/13.md)
   * [14. 보안 HTTP](summrize-a-book/http/14.md)
   * [15. 엔터티와 인코딩](summrize-a-book/http/15.md)
+  * [16. 국제화](summrize-a-book/http/16.md)
 * [자바 8 인 액션](summrize-a-book/java8/README.md)
   * [동작 파라미터화](summrize-a-book/java8/untitled-2.md)
   * [람다 표현식](summrize-a-book/java8/untitled.md)
