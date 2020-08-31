@@ -22,6 +22,7 @@
   * [15. 엔터티와 인코딩](summrize-a-book/http/15.md)
   * [16. 국제화](summrize-a-book/http/16.md)
   * [17. 내용 협상과 트랜스코딩](summrize-a-book/http/17.md)
+  * [18. 웹 호스팅](summrize-a-book/http/18.md)
 * [자바 8 인 액션](summrize-a-book/java8/README.md)
   * [동작 파라미터화](summrize-a-book/java8/untitled-2.md)
   * [람다 표현식](summrize-a-book/java8/untitled.md)
