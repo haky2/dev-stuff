@@ -25,6 +25,7 @@
   * [18. 웹 호스팅](summrize-a-book/http/18.md)
   * [19. 배포 시스템](summrize-a-book/http/19.md)
   * [20. 리다이렉션과 부하 균형](summrize-a-book/http/20.md)
+  * [21. 로깅과 사용 추적](summrize-a-book/http/21.md)
 * [자바 8 인 액션](summrize-a-book/java8/README.md)
   * [동작 파라미터화](summrize-a-book/java8/untitled-2.md)
   * [람다 표현식](summrize-a-book/java8/untitled.md)
