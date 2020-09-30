@@ -70,7 +70,7 @@
   * [16장. 트랜잭션과 락, 2차 캐시](summarize-books/jpa/transaction.md)
 * [코틀린 쿡북](summarize-books/kotiln-cookbook/README.md)
   * [1. 코틀린 설치와 실행](summarize-books/kotiln-cookbook/1.md)
-  * [Untitled](summarize-books/kotiln-cookbook/untitled.md)
+  * [2. 코틀린 기초](summarize-books/kotiln-cookbook/2.md)
 * [토비의 스프링](summarize-books/spring/README.md)
   * [1. 오브젝트와 의존관계](summarize-books/spring/1.md)
   * [3. 템플릿](summarize-books/spring/3.md)
