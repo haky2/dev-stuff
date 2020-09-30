@@ -14,5 +14,7 @@ description: by haky
 
 {% page-ref page="summarize-books/jpa/" %}
 
+{% page-ref page="summarize-books/kotiln-cookbook/" %}
+
 {% page-ref page="summarize-books/spring/" %}
 
