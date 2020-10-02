@@ -75,6 +75,7 @@
   * [4. 함수형 프로그래밍](summarize-books/kotiln-cookbook/4.md)
   * [5. 컬렉션](summarize-books/kotiln-cookbook/5.md)
   * [6. 시퀀스](summarize-books/kotiln-cookbook/6.md)
+  * [7. 영역 함수](summarize-books/kotiln-cookbook/7.md)
 * [토비의 스프링](summarize-books/spring/README.md)
   * [1. 오브젝트와 의존관계](summarize-books/spring/1.md)
   * [3. 템플릿](summarize-books/spring/3.md)
