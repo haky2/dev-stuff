@@ -78,6 +78,7 @@
   * [7. 영역 함수](summarize-books/kotiln-cookbook/7.md)
   * [8. 코틀린 대리자](summarize-books/kotiln-cookbook/8.md)
   * [9. 테스트](summarize-books/kotiln-cookbook/9.md)
+  * [10. 입력과 출력](summarize-books/kotiln-cookbook/10.md)
 * [토비의 스프링](summarize-books/spring/README.md)
   * [1. 오브젝트와 의존관계](summarize-books/spring/1.md)
   * [3. 템플릿](summarize-books/spring/3.md)
