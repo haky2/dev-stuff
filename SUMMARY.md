@@ -40,6 +40,7 @@
   * [03. 스트림의 새로운 표준](summarize-books/reactive-spring/3.md)
   * [04. 리액터 프로젝트](summarize-books/reactive-spring/4.md)
   * [05. 스프링 부트 2와 함께하는 리액티브](summarize-books/reactive-spring/5.md)
+  * [06. 웹플럭스](summarize-books/reactive-spring/6.md)
 * [자바 8 인 액션](summarize-books/java8/README.md)
   * [동작 파라미터화](summarize-books/java8/untitled-2.md)
   * [람다 표현식](summarize-books/java8/untitled.md)
