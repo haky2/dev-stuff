@@ -44,6 +44,7 @@
   * [07. 리액티브 방식으로 데이터베이스 사용하기](summarize-books/reactive-spring/7.md)
   * [08. 클라우드 스트림으로 확장하기](summarize-books/reactive-spring/8.md)
   * [09. 리액티브 애플리케이션 테스트하기](summarize-books/reactive-spring/9.md)
+  * [10. 자! 드디어 릴리즈다](summarize-books/reactive-spring/10.md)
 * [자바 8 인 액션](summarize-books/java8/README.md)
   * [동작 파라미터화](summarize-books/java8/untitled-2.md)
   * [람다 표현식](summarize-books/java8/untitled.md)
